@@ -24,7 +24,7 @@ Se utilizará el siguiente stack tecnológico:
 - **Java con Swing**: Para la interfaz gráfica de escritorio.
 
 ### 🧰 Herramientas de Desarrollo
-- **Git + GitHub**: Control de versiones y colaboración.
+- **Git + GitHub**: Control de versiones.
 
 ## 💡 Justificación Tecnológica
 Las teconologías seleccionadas son con las que me siento más cómodo a la hora de programar. Además ofrecen:

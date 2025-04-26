@@ -9,6 +9,44 @@ Un sistema integral para la gestión y venta de entradas para espectáculos teat
 
 ![umlTeatro](https://github.com/user-attachments/assets/d71dc8ef-d09e-4c3b-8604-9252eb950225)
 
+### 🗂️ Modelo de Datos
+Usuario
+{
+  "_id": ObjectId,
+  "nombre": String,
+  "email": String,
+  "telefono": String
+}
+
+Sala
+{
+  "_id": ObjectId,
+  "tipoSala": "SalaTeatro" | "Anfiteatro",
+  "capacidad": Number,
+  "precioBaseB": Number, // Solo si tipoSala = SalaTeatro
+  "precioFijo": Number   // Solo si tipoSala = Anfiteatro
+}
+
+Espectaculo
+{
+  "_id": ObjectId,
+  "artista": String,
+  "fechaFuncion": Date,
+  "horaFuncion": String,
+  "duracion": Number,
+  "salaId": ObjectId,
+  "precioEntrada": Number,
+  "tipoShow": String
+}
+Entrada
+{
+  "_id": ObjectId,
+  "espectaculoId": ObjectId,
+  "fechaCompra": Date,
+  "precioFinal": Number
+}
+
+
 ### 👨🏻‍💻 Tipo de testing:
 Tipos de Testeo Planificados
 -Test Unitarios: Se desarrollarán tests unitarios para las clases principales del backend, verificando la correcta funcionalidad aislada de métodos críticos, como el control de horarios de espectáculos y la gestión de entradas.
@@ -29,6 +67,11 @@ Backend y la Base de Datos (MongoDB).
 -Comunicación Frontend-Backend: Asegurar el correcto flujo de datos en las operaciones principales.
 
 ### ⚠️ Consideraciones:
+En el modelado de datos:
+
+Se define una colección Sala única para ambas subclases, diferenciando el tipo de sala mediante el campo tipoSala.
+Esta decisión se justifica para facilitar el mantenimiento, mejorar las consultas y permitir una rápida incorporación de nuevos tipos de salas en el futuro.
+
 Se utilizará el siguiente stack tecnológico:
 
 ### 🧠 Backend

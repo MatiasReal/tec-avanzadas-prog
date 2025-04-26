@@ -9,6 +9,24 @@ Un sistema integral para la gestión y venta de entradas para espectáculos teat
 
 ![umlTeatro](https://github.com/user-attachments/assets/d71dc8ef-d09e-4c3b-8604-9252eb950225)
 
+### 👨🏻‍💻 Tipo de testing:
+Tipos de Testeo Planificados
+-Test Unitarios: Se desarrollarán tests unitarios para las clases principales del backend, verificando la correcta funcionalidad aislada de métodos críticos, como el control de horarios de espectáculos y la gestión de entradas.
+
+-Test de Integración: Se planifican pruebas de integración para validar la correcta comunicación entre:
+
+Frontend (Java Swing) y Backend (API REST en Node.js).
+
+Backend y la Base de Datos (MongoDB).
+
+-Test Manual de Interfaz: Dado que la aplicación de escritorio está desarrollada en Java Swing, se realizará un testeo manual para verificar la usabilidad, la validación de formularios y la experiencia de usuario.
+
+#### ℹ️Módulos a testear:
+-Control de Horarios: Validación de superposición de espectáculos y respeto del tiempo mínimo de limpieza entre funciones.
+
+-Módulo de Gestión de Espectáculos: Alta, modificación, consulta y baja de espectáculos.
+
+-Comunicación Frontend-Backend: Asegurar el correcto flujo de datos en las operaciones principales.
 
 ### ⚠️ Consideraciones:
 Se utilizará el siguiente stack tecnológico:

@@ -34,14 +34,22 @@ Espectaculo
   "precioEntrada": Number,
   "tipoShow": String
 }
+
 Entrada
 {
   "_id": ObjectId,
   "espectaculoId": ObjectId,
-  "fechaCompra": Date,
-  "precioFinal": Number
+  "fechaCompra": Date
 }
 
+compraEntrada
+{
+  "_id": ObjectId,
+  "entradaId": ObjectId,
+  "userId": ObjectId,
+  "cantidadEntradas": Number,
+  "precioFinal": Number
+}
 
 ### 👨🏻‍💻 Tipo de testing:
 Tipos de Testeo Planificados

@@ -102,7 +102,7 @@ Las teconologías seleccionadas son con las que me siento más cómodo a la hora
 - **Escalabilidad**: MongoDB permite crecer sin fricción con nuevas funcionalidades.
 - **Agilidad**: Node.js y Mongoose simplifican la lógica del backend.
 
-- **Instrucciones para el despliegue:**
+ **Instrucciones para el despliegue:**
 
   1. Clona el repositorio:
      ```sh

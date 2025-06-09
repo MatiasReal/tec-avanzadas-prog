@@ -9,9 +9,10 @@ Un sistema integral para la gestión y venta de entradas para espectáculos teat
 Usuario
 {
   "_id": ObjectId,
-  "nombre": String,
+  "username": String,
   "email": String,
-  "telefono": String
+  "telefono": String,
+  "createdAt: Date
 }
 
 Sala
@@ -31,6 +32,8 @@ Espectaculo
   "horaFuncion": String,
   "duracion": Number,
   "salaId": ObjectId,
+  "precioEntradaA": Number,
+  "precioEntradB": Number,
   "precioEntrada": Number,
   "tipoShow": String
 }
@@ -39,7 +42,8 @@ Entrada
 {
   "_id": ObjectId,
   "espectaculoId": ObjectId,
-  "fechaCompra": Date
+  "fechaCompra": Date,
+  "cantidad": Number
 }
 
 compraEntrada
@@ -48,7 +52,8 @@ compraEntrada
   "entradaId": ObjectId,
   "userId": ObjectId,
   "cantidadEntradas": Number,
-  "precioFinal": Number
+  "precioFinal": Number,
+  "tipoEntrada": "A" | "B"
 }
 
 ### 👨🏻‍💻 Tipo de testing:

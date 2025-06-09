@@ -58,16 +58,24 @@ compraEntrada
 
 ### 👨🏻‍💻 Tipo de testing:
 Tipos de Testeo Planificados
--Test Unitarios: Se desarrollarán tests unitarios para las clases principales del backend, verificando la correcta funcionalidad aislada de métodos críticos, como el control de horarios de espectáculos y la gestión de entradas.
 
 -Test de Integración: Se planifican pruebas de integración para validar la correcta comunicación entre:
 
 Backend y la Base de Datos (MongoDB).
 
-#### ℹ️Módulos a testear:
--Control de Horarios: Validación de superposición de espectáculos y respeto del tiempo mínimo de limpieza entre funciones.
+Justificación:
+En este proyecto, la lógica de negocio relevante (como el control de horarios y la gestión de espectáculos) depende directamente de la interacción con la base de datos y de la API REST. Por ello, se priorizó el desarrollo de tests de integración que validan el comportamiento real del sistema, incluyendo la comunicación entre el backend y MongoDB, y la correcta gestión de los flujos completos de alta, modificación, consulta y baja de espectáculos.
 
--Módulo de Gestión de Espectáculos: Alta, modificación, consulta y baja de espectáculos.
+Esta estrategia asegura que se testean los casos de uso críticos en un entorno lo más cercano posible al real, garantizando la robustez del sistema ante cambios en la base de datos o en la API.
+
+Los tests unitarios no se consideraron estrictamente necesarios, ya que la lógica de negocio no está desacoplada en funciones puras, sino que reside en los controladores y depende de operaciones asíncronas y consultas a la base de datos.
+
+Si en el futuro se extraen funciones puras de validación, se podrán agregar tests unitarios específicos para ellas.
+
+#### ℹ️Módulos a testear:
+-Control de Horarios: Validación de superposición de espectáculos y respeto del tiempo mínimo de limpieza entre funciones (mediante tests de integración).
+
+-Módulo de Gestión de Espectáculos: Alta, modificación, consulta y baja de espectáculos (mediante tests de integración).
 
 ### ⚠️ Consideraciones:
 En el modelado de datos:

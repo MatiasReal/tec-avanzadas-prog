@@ -33,7 +33,7 @@ Espectaculo
   "duracion": Number,
   "salaId": ObjectId,
   "precioEntradaA": Number,
-  "precioEntradB": Number,
+  "precioEntradaB": Number,
   "precioEntrada": Number,
   "tipoShow": String
 }

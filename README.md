@@ -101,3 +101,19 @@ Las teconologías seleccionadas son con las que me siento más cómodo a la hora
 ### ✅ Ventajas de la Arquitectura Seleccionada:
 - **Escalabilidad**: MongoDB permite crecer sin fricción con nuevas funcionalidades.
 - **Agilidad**: Node.js y Mongoose simplifican la lógica del backend.
+
+- **Instrucciones para el despliegue:**
+
+  1. Clona el repositorio:
+     ```sh
+     git clone https://github.com/MatiasReal/tec-avanzadas-prog.git
+     cd tec-avanzadas-prog
+     ```
+
+  2. Construye y ejecuta el proyecto con Docker:
+     ```sh
+     docker build -t tec-avanzadas-prog .
+     docker run -p 5000:5000 tec-avanzadas-prog
+     ```
+
+  3. El backend estará disponible en [http://localhost:5000](http://localhost:5000)

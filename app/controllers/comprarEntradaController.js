@@ -65,7 +65,7 @@ async function createCompraEntrada(req, res) {
 
     async function getCompraEntrada(req, res) {
         try {
-            const compraData = await compraEntradaModel.findById(req.params.id).populate('entrada').populate('user');
+            const compraData = await compraEntradaModel.findById(req.params.id).populate('entradaId').populate('userId');
             if (!compraData) {
                 return res.status(404).json({ message: 'Compra de entrada no encontrada' });
             }
@@ -103,7 +103,7 @@ async function createCompraEntrada(req, res) {
 
     async function getAllComprasEntradas(req, res) {
         try {
-            const compras = await compraEntradaModel.find().populate('entrada').populate('user');
+            const compras = await compraEntradaModel.find().populate('entradaId').populate('userId');
             res.json(compras);
         } catch (error) {
             res.status(500).json({ message: 'Error al obtener las compras de entradas', error });
